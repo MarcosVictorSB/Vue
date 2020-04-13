@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+
+  </script>
+  <title>Vue.js</title>
+</head>
+
+<body>
+
+  <div id="app">
+    {{ total }}
+    <button type="button" name="button" @click="incrementar">Incrementar</button>
+    <button type="button" name="button" @click="diminuir">Diminuir</button>
+    <hr>
+    <p>{{ instrumento }}</p>
+    <button type="button" name="button" @click="mudarNome('Violão')">Violão</button>
+    <button type="button" name="button" @click="mudarNome('Guitarra')">Guitarra</button>
+    <hr>
+  </div>
+
+  <div id="api">
+    <p>lastestTime: {{acoes.lastestTime }} </p>
+    <p>lastestPrice: {{acoes.lastestPrice }} </p>
+    <p>companyName: {{acoes.companyName }} </p>
+
+    <button type="button" name="button" @click="puxarAcoes">Puxar Ações</button>
+  </div>
+
+  <div class="" id="quadrado">
+
+  </div>
+
+  <script type="text/javascript" src="main.js"></script>
+</html>
