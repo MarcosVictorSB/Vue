@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+
+  </script>
+  <title>Vue.js</title>
+</head>
+
+<body>
+  <div class="" id="app">
+    <p v-if="logado === 1">Usuário Logado 1</p>
+    <p v-else-if="logado === 2">Usuário Logado 2</p>
+    <p v-else> Outro usuario</p>
+
+    <template id="" v-if="logado">
+      <p>Usuário está logado</p>
+      <button type="button" name="button" @click="logado = false">Deslogar</button>
+    </template>
+    <template id="" v-else>
+      <p>Usuario está deslogado.</p>
+      <button type="button" name="button" @click="logado = true">Logar</button>
+
+    </template>
+  </div>
+  <hr>
+  <div class="" id="pratica">
+    <p>Banana: {{ estoqueBanana }}</p>
+    <button type="button" name="button" @click="carrinho++" v-if="carrinho <= estoqueBanana">+</button>
+    <button type="button" name="button" @click="carrinho--">-</button>
+    <p v-show="carrinho >= estoqueBanana">O carrinho atingiu o limite máximo</p>
+    <p>Carrinho: {{ carrinho }}  </p>
+  </div>
+  <hr>
+  <div class="" id="aula">
+    <p>Banana: {{ estoqueBanana }}</p>
+    <button type="button" name="button" v-show="estoqueBanana" @click="adicionarItem">+</button>
+    <button type="button" name="button" v-show="carrinho" @click="removerItem">-</button>
+    <p>Carrinho: {{ carrinho }}</p>
+    <p v-show="estoqueBanana === 0">Não temos mais Bananas em estoque</p>
+  </div>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="main.js"></script>
+
+</html>
