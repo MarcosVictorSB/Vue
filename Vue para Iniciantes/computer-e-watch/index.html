@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+
+  </script>
+  <title>Vue.js</title>
+</head>
+
+<body>
+
+  <div id="app">
+    {{ total }}
+  </div>
+  <hr>
+
+  <div id="carros">
+    <ul>
+      <li v-for="carro in carrosAzuis">{{ carro }}</li>
+    </ul>
+
+    <button type="button" name="button" @click="removerCarro">Remover</button>
+    <p>{{contador}}</p>
+    <button type="button" name="button" @click="contador++">Adicionar</button>
+  </div>
+
+  <hr>
+
+  <div class="" id="api">
+    <input type="text" name="" value="" placeholder="cep" maxlength="8" v-model="cep">
+    <h1 >{{ cep }}</h1>
+    <ul>
+      <li v-for="(valor, chave) in enderenco">{{ chave }} : {{ valor }}</li>
+    </ul>
+  </div>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+  <div class="#exer" id="exer">
+    {{ nomeCompleto}}
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="" id="novoexer">
+    <button type="button" name="button" @click="puxarPaises">Puxar</button>
+    <select class="" name="paises" id="paises" v-model="paisSelecionado">
+      <option v-for="pais in paises" :value="pais.name" >{{ pais.name }}</option>
+    </select>
+
+    <p>{{ paisSelecionado }}</p>
+    <p>{{ capital.capital }}</p>
+  </div>
+
+  <script type="text/javascript" src="main.js"></script>
+</html>

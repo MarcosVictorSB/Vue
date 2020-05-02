@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+
+  </script>
+  <title>Vue.js</title>
+</head>
+
+<body>
+  <div class="" id="form">
+    <form class="" action="index.html" method="post">
+      <label for="">Nome</label>
+      <input type="text" name="nome" id="nome" v-model="nome">
+
+      <label for="">Email</label>
+      <input type="email" name="email" id="email" v-model="email">
+
+      <label for="">Telefone</label>
+      <input type="text" name="telefone" id="telefone" v-model="telefone">
+
+      <label for="">Mensagem</label>
+      <textarea name="" value="" id="mensagem" v-model="mensagem"></textarea>
+
+      <input type="submit" name="Enviar" value="Enviar" @click.prevent="enviarFormulario">
+
+    </form>
+
+    <div class="">
+      <ul>
+        <li v-for="(valor, chave) in resultado">{{ resultado }}</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div class="" id="exer1">
+    <hr>
+    <h1>Exercicios</h1>
+    <h3>Crie um botão</h3>
+    <form class="" action="index.html" method="post">
+      <label for="">width</label>
+      <input type="text" name="" value="" v-model="btn.width"><br>
+
+      <label for="">height</label>
+      <input type="text" name="" value="" v-model="btn.height"><br>
+
+      <label for="">font-size</label>
+      <input type="text" name="" value="" v-model="btn.fontSize"><br>
+
+      <label for="">font-family</label>
+      <input type="text" name="" value="" v-model="btn.fontFamily"><br>
+
+      <label for="">text-align</label>
+      <input type="text" name="" value="" v-model="btn.textAlign"><br>
+
+      <label for="">background</label>
+      <input type="color" name="" value="" v-model="btn.background"><br>
+
+      <label for="">color</label>
+      <input type="color" name="" value="" v-model="btn.color"><br>
+
+      <label for="">border-radius</label>
+      <input type="text" name="" value="" v-model="btn.borderRadius"><br>
+
+    </form>
+
+
+    <a href="#" :style="btn">Clique Aqui</a>
+
+  </div>
+  <hr>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <div id="app">
+    <input v-model="nome" /> <br><hr>
+    <input :value="email" />
+    <input type="checkbox" name="" value="" id="receberEmail" v-model="receberEmail">
+    <label for="receberEmail">Receber Email</label><br>
+    <input type="text" v-model.number="ano" /> <br><hr>
+    <p> {{ ano }}</p>
+    <br><hr>
+    <textarea v-model="mensagem"></textarea>
+    <p> {{ receberEmail }} </p>
+    <p>{{nome}}</p>
+    <p>{{mensagem}}</p>
+  </div>
+  <hr>
+
+  <div id="app1">
+    <input type="radio" v-model="cor" value="azul" id="Azul" />
+    <label for="Azul">Azul</label><br />
+    <input type="radio" v-model="cor" value="vermelho" id="Vermelho" />
+    <label for="Vermelho">Vermelho</label><br />
+    <input type="radio" v-model="cor" value="Verde" id="Verde" />
+    <label for="Verde">Verde</label>
+
+    <p>cor: {{cor}}</p>
+</div>
+
+<hr>
+<div id="app2">
+  <select v-model="fruta">
+    <option disabled value="">Selecione uma fruta</option>
+    <option value="banana">Banana</option>
+    <option value="morango">Morango</option>
+    <option value="uva">Uva</option>
+  </select>
+
+  <p>fruta: {{fruta}}</p>
+</div>
+
+<hr>
+
+<div id="app3">
+  <textarea v-model.lazy="mensagem"></textarea><br>
+  <input v-model.number="total" /><br><br>
+  <input v-model.trim="email" />
+</div>
+
+
+
+
+
+
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

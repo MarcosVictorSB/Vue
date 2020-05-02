@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+
+  </script>
+  <title>Vue.js</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <p :class="[cor, background]">Texto Azul</p>
+    <p :class="{ativo: estaAtivo, verde: elementoVerde}">Mostrar Texto</p>
+    <button type="button" name="button" @click="estaAtivo = !estaAtivo">Mudar class</button>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <a href="#" :style="{background: bgColor, fontSize: tamanho + 'px', color: corLink}" >Estileze ele</a>
+    <br>
+    <button type="button" name="button" @click="tamanho++">Aumentar tamanho</button>
+
+    <hr>
+    <br>
+    <p :style="estiloBotao">Novo Texto</p>
+    <p :style="estiloParagrafro">Tamanho Alterado randomicamente</p>
+    <p>{{ estiloParagrafro }}</p>
+  </div>
+  <style media="screen">
+  .azul {
+    color: blue;
+  }
+
+  .verde {
+    color: green;
+  }
+
+  .ativo {
+    background-color: red;
+  }
+
+  .vermelho {
+    background-color: red;
+  }
+  </style>
+
+  <script type="text/javascript" src="main.js"></script>
+</html>
